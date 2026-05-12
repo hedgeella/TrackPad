@@ -60,18 +60,30 @@ A native macOS drawing and note-taking application built with Swift and SwiftUI 
 - **Xcode 15.0** or later
 - **Force Touch trackpad** recommended for pressure sensitivity (falls back to constant pressure on older trackpads)
 
-## Building
+## Building & Running
 
-### Using Xcode
-1. Open `TrackPad.xcodeproj` in Xcode
-2. Select the "TrackPad" scheme
-3. Press ⌘R to build and run
+Everything is pure Swift — no manual Xcode configuration needed.
 
-### Using Swift Package Manager
+### Option A: Swift CLI (recommended)
+Open Terminal on your Mac and run:
 ```bash
+git clone https://github.com/hedgeella/TrackPad.git
+cd TrackPad
 swift build
 swift run TrackPad
 ```
+
+Or use the included script:
+```bash
+chmod +x build_and_run.sh
+./build_and_run.sh
+```
+
+### Option B: Xcode
+```bash
+open TrackPad.xcodeproj
+```
+Then press ⌘R to build and run. If you get a signing error, go to **TrackPad target → Signing & Capabilities → Team** and select your Apple ID.
 
 ## Project Structure
 
